@@ -9,16 +9,17 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.UUID;
 
 @Entity
-@Table(name = "user")
+@Table(name = "usuario")
 @Getter
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class User {
+public class User implements Serializable {
 
     @Id
     @Column(name = "id", nullable = false)
@@ -33,13 +34,16 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "creationDate", nullable = false)
+    @Column(name = "token", nullable = false)
+    private String token;
+
+    @Column(name = "creation_date", nullable = false)
     private Instant creationDate;
 
-    @Column(name = "lastModifiedDate")
+    @Column(name = "last_modified_date")
     private Instant lastModifiedDate;
 
-    @Column(name = "lastLogin", nullable = false)
+    @Column(name = "last_login", nullable = false)
     private Instant lastLogin;
 
     @Column(name = "enable", nullable = false)

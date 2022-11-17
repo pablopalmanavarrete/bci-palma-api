@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "phone")
@@ -13,7 +14,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class Phone {
+public class Phone implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -22,13 +23,13 @@ public class Phone {
     @Column(name = "number", nullable = false)
     private String number;
 
-    @Column(name = "countryCode", nullable = false)
+    @Column(name = "country_code", nullable = false)
     private String countryCode;
 
-    @Column(name = "cityCode", nullable = false)
+    @Column(name = "city_code", nullable = false)
     private String cityCode;
 
     @ManyToOne
-    @Column(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 }
