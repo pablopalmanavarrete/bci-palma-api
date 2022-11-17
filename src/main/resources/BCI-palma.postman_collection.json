@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "18a3c670-610c-43b0-99f9-ec309b04efeb",
+		"name": "BCI-palma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crear-usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pablo Palma\",\r\n    \"email\": \"pablo.palma.n@gmail.com\",\r\n    \"password\": \"palma123\",\r\n    \"phones\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8095/self-service/api-palma/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8095",
+					"path": [
+						"self-service",
+						"api-palma",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8095/self-service/api-palma/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8095",
+					"path": [
+						"self-service",
+						"api-palma",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-usuario-id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8095/self-service/api-palma/users/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8095",
+					"path": [
+						"self-service",
+						"api-palma",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "669e8664-a1ae-42c6-8519-a40ac0c2da6e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pablo Palma\",\r\n    \"email\": \"pablo.palma.n@gmail.com\",\r\n    \"password\": \"palma124\",\r\n    \"phones\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8095/self-service/api-palma/users/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8095",
+					"path": [
+						"self-service",
+						"api-palma",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "669e8664-a1ae-42c6-8519-a40ac0c2da6e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8095/self-service/api-palma/users/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8095",
+					"path": [
+						"self-service",
+						"api-palma",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "669e8664-a1ae-42c6-8519-a40ac0c2da6e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-phones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8095/self-service/api-palma/users/:id/phones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8095",
+					"path": [
+						"self-service",
+						"api-palma",
+						"users",
+						":id",
+						"phones"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "669e8664-a1ae-42c6-8519-a40ac0c2da6e"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
